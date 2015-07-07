@@ -1,0 +1,86 @@
+#roll one dice
+d=10
+dice1 <- sample(6,d,replace=T)
+dice1
+hist(dice1, freq=FALSE)
+
+
+d=100
+dice2 <- sample(6,d,replace=T)
+hist(dice2)
+
+
+d=10000
+dice3 <- sample(6,d,replace=T)
+hist(dice3)
+-------------------------------
+
+trials=10000
+
+dicemean <- numeric(trials)
+
+for (i in 1:trials){
+dicemean[i] <- mean(sample(6,5,replace=T))
+}
+hist(dicemean,freq=F)
+
+
+-----------------------------------
+###CLT###
+#uniform dist.
+
+hist(runif(10000)*10, main="")
+means <- numeric(10000)
+for(i in 1:10000)
+{
+means[i] <- mean(runif(5)*10)
+}
+hist(means, freq=false)
+mean(means)
+sd(means)
+
+xv <- seq(0,10,0.1)
+yv <- dnorm(xv,mean=mean(means),sd=sd(means))
+lines(xv,yv)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
